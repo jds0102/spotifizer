@@ -1,0 +1,10 @@
+<p>
+  song-search works!
+
+</p>
+<input [(ngModel)]="searchInput" type="text" /> <button (click)="onSearch()">Search</button>
+<ul>
+  <li *ngFor="let song of songs" (click)="onSongSelected(song.id)">
+    {{song.id}} - {{song.name}} - {{song.album.name}}
+  </li>
+</ul>

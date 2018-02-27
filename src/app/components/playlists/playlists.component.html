@@ -1,0 +1,17 @@
+<p *ngIf="loading">loading...</p>
+<div *ngIf="!loading">
+  <label for="song-uri-input">Song URI: <input id="song-uri-input" [(ngModel)]="songUri" /></label>
+  <button (click)="findPlaylists()">Search</button>
+</div>
+
+<div *ngIf="matchingPlaylists.length">
+  These match
+  <p *ngFor="let playlist of matchingPlaylists">
+    {{playlist.name}}
+  </p>
+  <hr />
+</div>
+
+<p *ngFor="let playlist of playlists">
+  {{playlist.name}}
+</p>

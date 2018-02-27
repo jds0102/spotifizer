@@ -1,0 +1,2 @@
+<app-song-search *ngIf="songId == null" (songSelected)="songSelected($event)"></app-song-search>
+<app-analyzer *ngIf="songId != null" [songId]="songId"></app-analyzer>
